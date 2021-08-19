@@ -15,7 +15,7 @@ java -jar lcs-service-0.0.1-SNAPSHOT.jar --server.port=8080
 ```
 After executing above commands the rest api will start running on port 8080 and url *http://localhost:8080/lcs*
 ```
-Sample Curl request
+#Sample Curl request
 read -d '' payLoad << EOF
 	{
         "setOfStrings": [
