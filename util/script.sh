@@ -103,12 +103,14 @@ fi
 
 # Test case 5: Correct post body (Positive test case)
 echo "Test case 5: Correct post body (Positive test case)"
-statusCode=$(curl \
+statusCode=$(curl --write-out %{http_code} --silent --output /dev/null \
 -X POST \
--i -H "Accept: application/json" -H "Content-Type: application/json" \
+-H 'Content-type: application/json' \
 --data "${payLoad4}" ${url})
 
-echo "${statusCode}"
-
-RESP=$(echo "${statusCode}" | grep -oP "value")
-echo $RESP
+if [ $statusCode == 200 ]
+then
+    echo "PASSED, statuscode= "${statusCode}
+else
+    echo "FAILED, statuscode= "${statusCode}
+fi

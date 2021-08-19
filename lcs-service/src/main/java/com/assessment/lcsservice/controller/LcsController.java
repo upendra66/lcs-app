@@ -1,7 +1,5 @@
 package com.assessment.lcsservice.controller;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -18,7 +16,7 @@ import com.assessment.lcsservice.vo.LongestCommonSubstrings;
 @Validated
 public class LcsController {
 	
-	 final String SCHEMA_PATH = "classpath:schema.json";
+	final String SCHEMA_PATH = "classpath:schema.json";
 
 	@Autowired
 	LcsService lcsService;
@@ -26,7 +24,7 @@ public class LcsController {
 	
 	@PostMapping("/lcs")
 	@CrossOrigin
-	public ResponseEntity<LongestCommonSubstrings> greeting(@ValidSchema(SCHEMA_PATH) InputData inputData) {
+	public ResponseEntity<LongestCommonSubstrings> findLcs(@ValidSchema(SCHEMA_PATH) InputData inputData) {
 
 		return ResponseEntity.ok(lcsService.findLcs(inputData));
 	}

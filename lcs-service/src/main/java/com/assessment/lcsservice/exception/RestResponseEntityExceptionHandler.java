@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -30,6 +31,23 @@ public class RestResponseEntityExceptionHandler {
 
 		return ResponseEntity.badRequest().body(errorMap);
 	}
+	
+	
+	/**
+	 * This Method handles MethodNotSupportedException
+	 * 
+	 * @param ex: JsonParseException
+	 * @return ResponseEntity object with errorMessage map.
+	 */
+	
+	@ExceptionHandler(value = { HttpRequestMethodNotSupportedException.class })
+	public ResponseEntity<HashMap<String, Object>> handleMethodNotSupportedException(HttpRequestMethodNotSupportedException ex) {
+
+		HashMap<String, Object> errorMap = new HashMap<String, Object>();
+		errorMap.put("message", "This method is not supported");
+		return ResponseEntity.status(405).body(errorMap);
+	}
+	
 
 	/**
 	 * This Method handles json parsing exceptions.
