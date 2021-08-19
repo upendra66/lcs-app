@@ -28,7 +28,7 @@ EOF
 curl -d '{payLoad}' -H 'Content-Type: application/json' http://localhost:8080/lcs
 ```
 
-######Sample request and response:
+###### Sample request and response:
 ![image](https://user-images.githubusercontent.com/50758711/130099414-ee9e2ca8-c196-4225-852b-3b4986f5c520.png)
 
 
