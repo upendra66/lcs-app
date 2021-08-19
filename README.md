@@ -6,7 +6,7 @@ This Application is for finding longest common substring from given set of strin
 This is a java application to find the longest common substrings from given set of strings. it uses java 1.8 and spring-boot framework to build the RESTful API.
 
 ##### Build and Run
-It uses maven build tool to create artifacts. The maven3+ and jdk1.8 are required to build and deploy this application. To build and run the application commands are listed below.
+It uses maven build tool to create artifacts. The maven and jdk1.8 are required to build and deploy this application. To build and run the application commands are listed below.
 
 ```
 cd lcs-service
