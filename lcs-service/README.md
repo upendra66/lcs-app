@@ -7,7 +7,7 @@ It uses maven build tool to create artifacts. The maven3+ and jdk1.8 are require
 * Prerequisites
   * maven
   * jdk1.8
-  * 
+  
 ```
 mvn clean install
 java -jar lcs-service-0.0.1-SNAPSHOT.jar --server.port=8080
