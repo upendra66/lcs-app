@@ -1,0 +1,36 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema#",
+	"type": "object",
+	"title": "SetOfStrings",
+	"description": "Set of Strings",
+	"additionalProperties": true,
+	"required": [
+		"setOfStrings"
+	],
+	"properties": {
+		"setOfStrings": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/stringValue"
+			},
+			"minItems": 1,
+			"uniqueItems": true
+		}
+	},
+	"$defs": {
+		"stringValue": {
+			"type": "object",
+			"title": "String Value",
+			"description": "String Value",
+			"required": [
+				"value"
+			],
+			"properties": {
+				"value": {
+					"type": "string",
+					"description": "String value"
+				}
+			}
+		}
+	}
+}

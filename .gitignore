@@ -1,0 +1,15 @@
+.vscode/
+.DS_Store
+lcs-service/mvnw.cmd
+lcs-service/target
+lcs-service/doc
+lcs-service/.mvn
+lcs-service/.apt_generated
+lcs-service/.classpath
+lcs-service/.factorypath
+lcs-service/.project
+lcs-service/.settings
+lcs-service/.springBeans
+lcs-service/.sts4-cache
+
+

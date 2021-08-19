@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+
+                $('#error-container').hide();
+                $('#result-container').hide();
+                input = $("#setOfStrings").val();
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:8080/lcs",
+                    data: input,
+                    success: function (output) {
+                        $('#result-container').show();
+                        document.getElementById("result").textContent = JSON.stringify(
+                            output, undefined, 2);
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+
+                        $('#error-container').show();
+
+                        if (xhr.status == 0) {
+                            document.getElementById("error").textContent =
+                                "Service not running!"
+                        } else {
+                            document.getElementById("error").textContent = JSON.stringify(
+                                JSON.parse(xhr.responseText), undefined, 2);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1>Find Longest Common Substring</h1>
+    </div>
+    <div id="container" style="width: 400px; margin: 0 auto;padding-top: 20px;">
+        <div style="font-weight: bolder;">Enter json object</div>
+        <textarea id="setOfStrings" name="setOfStrings" rows="14" placeholder="Enter json object here..."
+            style="width: 400px;"></textarea>
+        <button style="float: right; margin-top: 10px; padding: 8px 16px">Submit</button>
+        <div style="color:#006400; display: none;" id="result-container">
+            <span style="font-weight: bolder;">Result!</span>
+            <pre id="result"></pre>
+        </div>
+
+        <div style="color: #8B0000; display: none;" id="error-container">
+            <span style="font-weight: bolder;">Error!</span>
+            <pre id="error"></pre>
+        </div>
+    </div>
+
+</body>
+
+</html>
