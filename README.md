@@ -14,6 +14,8 @@ mvn clean install
 java -jar lcs-service-0.0.1-SNAPSHOT.jar --server.port=8080
 ```
 After executing above commands the rest api will start running on port 8080 and url *http://localhost:8080/lcs*
+*Sample Request*
+![image](https://user-images.githubusercontent.com/50758711/130099226-c69cfc42-717b-4c0d-8846-bc74e3effa71.png)
         
 
         
