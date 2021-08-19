@@ -36,8 +36,7 @@ curl -d '{payLoad}' -H 'Content-Type: application/json' http://localhost:8080/lc
 This is a html application which renders a form where user can enter above mentioned json object to check the longest common substring. it connects to RESTful API for that purpose.
 This page can be deployed in any web server like apache webserver or node server. As it is standalone html page so user can open this in any web browser also.
 
-![image](https://user-images.githubusercontent.com/50758711/130099226-c69cfc42-717b-4c0d-8846-bc74e3effa71.png)
-        
+![image](https://user-images.githubusercontent.com/50758711/130129184-4439d13f-17d0-4410-a542-2be386bfb139.png)     
 
 ### LCS Validation
 This is a validation script which can be excuted in any linux machine it verifies RESTful API and procuces output on same terminal with pass and fail message.
