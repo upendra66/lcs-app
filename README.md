@@ -41,11 +41,8 @@ This page can be deployed in any web server like apache webserver or node server
 
 ### LCS Validation
 This is a validation script which can be excuted in any linux machine it verifies RESTful API and procuces output on same terminal with pass and fail message.
-Here is sample 
 Update the *url* in script if your REST API is running in different machine
-
-
-
+Here is sample 
 ![image](https://user-images.githubusercontent.com/50758711/130099489-8947b3b7-a44f-498b-ab9e-85731d59b425.png)
         
 
