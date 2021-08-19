@@ -1,4 +1,4 @@
-# Longest Common Substring 
+# Longest Common Substring Application
 This Application is for finding longest common substring from given set of strings. it has three parts, RESTful API, web page and validation script.
 
 
