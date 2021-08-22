@@ -15,7 +15,7 @@ It uses maven build tool to create artifacts. The maven and jdk1.8 are required 
 ```
 cd lcs-service
 mvn clean install
-java -jar lcs-service-0.0.1-SNAPSHOT.jar --server.port=8080
+java -jar target/lcs-service-0.0.1-SNAPSHOT.jar --server.port=8080
 ```
 
 After executing above commands the rest api will start running on port 8080 and url *http://localhost:8080/lcs*
